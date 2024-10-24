@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+body {
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +20,12 @@
 nav {
     width: 100%;
     height: 12vh;
-    background-color: #2a7da2;
+    background-color: #2a7da2; /* Fixed background color */
     position: sticky;
     top: 0;
-    align-items: center;
-
-    z-index: 99999999;
     display: flex;
+    align-items: center;
+    z-index: 999;
     justify-content: space-between;
     padding: 0 50px;
 }
@@ -27,7 +34,6 @@ nav .logo img {
     width: 60px;
 }
 
-
 nav .navigation {
     display: flex;
     gap: 40px;
@@ -35,41 +41,27 @@ nav .navigation {
 
 .navigation a {
     text-decoration: none;
-    color: white;
+    color: white; /* Ensuring text is white */
 }
-
-body {
-    background-color: lightblue;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 
 .container {
     position: relative;
     width: 100%;
-    max-width: 1000px;
+    max-width: 90vw; 
     min-height: 1000px;
     background-color: white;
-    margin: 50px;
+    margin: 5vw;
     display: grid;
     grid-template-columns: 1fr 2fr;
     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
 
-
 .container .left_side {
-    position: relative;
     background-color: #003147;
     padding: 40px;
 }
 
-
 .profileText {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +70,6 @@ body {
 }
 
 .profileText .imgBox {
-    position: relative;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -86,14 +77,10 @@ body {
 }
 
 .profileText .imgBox img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
-
 
 .profileText h2 {
     color: white;
@@ -110,8 +97,6 @@ body {
     font-weight: 300;
 }
 
-
-
 .contact-info {
     padding-top: 40px;
 }
@@ -124,23 +109,15 @@ body {
     margin-bottom: 20px;
 }
 
-
 .contact-info ul {
     position: relative;
-
 }
 
-
 .contact-info ul li {
-    position: relative;
     list-style: none;
     margin: 10px 0;
     cursor: pointer;
 }
-
-
-
-
 
 .contact-info ul li .icon {
     display: inline-block;
@@ -149,28 +126,17 @@ body {
     color: #049afc;
 }
 
-
 .contact-info ul li span {
     color: white;
     font-weight: 300;
-
 }
 
 .contact-info.education li {
     margin-bottom: 18px;
 }
 
-
 .contact-info.education h5 {
     color: #049afc;
-    font-weight: 500;
-}
-
-
-
-
-.contact-info.education h4:nth-child(2) {
-    color: white;
     font-weight: 500;
 }
 
@@ -179,44 +145,30 @@ body {
     font-weight: 300;
 }
 
-
-
 .contact-info.language .percent {
-    position: relative;
     width: 100%;
     height: 6px;
     background-color: rgb(21, 27, 22);
-    display: block;
     margin-top: 5px;
 }
 
-
 .contact-info.language .percent div {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     background-color: #049afc;
 }
 
-
 .container .right_side {
-    position: relative;
     background-color: white;
     padding: 40px;
 }
 
-
-
 .about {
     margin-bottom: 50px;
-
 }
 
 .about:last-child {
     margin-bottom: 0;
 }
-
 
 .title2 {
     color: #003147;
@@ -229,10 +181,8 @@ p {
     color: #333;
 }
 
-
 .about .box {
     display: flex;
-    flex-direction: row;
     margin: 20px 0;
 }
 
@@ -250,17 +200,12 @@ p {
     text-transform: uppercase;
     color: #2a7da2;
     font-size: 16px;
-
 }
 
-
 .skills .box {
-    position: relative;
-    width: 100%;
     display: grid;
-    align-items: center;
     grid-template-columns: 150px 1fr;
-    justify-content: center;
+    align-items: center;
 }
 
 .skills .box h4 {
@@ -270,58 +215,88 @@ p {
 }
 
 .skills .box .percent2 {
-    position: relative;
     background-color: #9ca4b3;
     width: 100%;
     border-radius: 10px;
     height: 10px;
 }
 
-
 .skills .box .percent2 div {
     border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     background-color: #049afc;
 }
-
 
 .btn-div {
     display: flex;
     gap: 20px;
 }
 
+.download-btn, .edit-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
 .download-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
     background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
 }
-
-.edit-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #4c7faf;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
 
 .download-btn:hover {
     background-color: #45a049;
 }
 
+.edit-btn {
+    background-color: #4c7faf;
+}
 
+/* Responsive CSS */
+@media only screen and (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+
+    .profileText .imgBox {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skills .box {
+        grid-template-columns: 100px 1fr;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    nav {
+        padding: 0 10px;
+    }
+
+    .navigation {
+        gap: 20px;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .profileText .imgBox {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skills .box {
+        grid-template-columns: 80px 1fr;
+    }
+}
